@@ -1,0 +1,56 @@
+                       
+                       Backend For E-cart
+                        E-Cart Server Creation
+                    -------------------------------
+            1.create package.json - npm init -s 
+            2.Install some library - npm i express cors mongoose dotenv //Here cors used for connect two ports Front End and Backend 
+             => dotenv- DotEnv is a lightweight npm package that automatically loads environment variables from a .env file into the process.
+                env object. To use DotEnv, first install it using the command: npm i dotenv . 
+                Then in your app, require and configure the package like this: require('dotenv').
+                Types
+                  => 1.System Environment variables (System Path)
+                  => 2.User Environment Variable (Admin)
+                  => 3.Runtime/Process Variable (Application running process)
+
+            3.Create .env file
+            4.Create .gitignore file
+            5.Add node_modules and .env in .gitignore
+            6.Create index.js
+            7.In index.js file
+              =>Use nodemon for run index.js - npm i -g nodemon (install nodemon Command)
+              =>nodemon index.js => For run Backend index.js 
+              =>import express,cors and dotenv
+              =>Create an app using express
+              =>Use cors and express.json() in server app
+              =>Define port number
+
+                      MongoDB Atlas CONFIGURATION
+                -------------------------------------------
+                First---
+                  Create a Database and collection in "MongoDB Atlas"
+
+                1.Copy connection string from Atlas and paste it into .env file.
+                2.Create a db folder in server,inside create a connection.js
+                3.In connection.js file import mongoose
+                4.get db connection string from .env file.
+                5.Use mongoose to connect MongoDB with NodeJS
+                6.Import connection.js in index.js file.
+                7.Create a model in server
+                8.Create a model/collection to store products in model folder 
+                9.Export model
+                10.Create a router for client request - 
+                    =>Create a route folder
+                    =>Create a router.js inside route Folder.
+                    => Inside router.js file - import express
+                    => Using express - Create an object for router class inorder to setup path.
+                    => resolve client request in various server routes
+                    =>export router 
+                11.Create controller folder inorder to define logic to resolve client request 
+                  =>controller(folder)
+                      ->productController.js
+                      ->cartController.js
+                      ->wishlistController.js
+                      
+                  =>Inside productController.js file
+                    -Import product collection
+                    -Define Logic to resolve client request
